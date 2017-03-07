@@ -7,6 +7,7 @@ layout: default
 <p>Woooow</p>
 
 <section class="portfolio">
+  <h2>Recent werk</h2>
   <ul>
     {% for post in site.categories.video limit:10 %}
     <li class="portfolio-unit">
@@ -14,5 +15,14 @@ layout: default
       <div><iframe src="{{post.video}}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
     </li>
     {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Partners</h2>
+  <ul>
+  {% for post in site.categories.logo %}
+    <li><a href="{{post.site-link}}">{{post.image}}</a></li>
+  {% endfor %}
   </ul>
 </section>
