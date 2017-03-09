@@ -2,9 +2,10 @@
 layout: default
 ---
 <section class="hero grid push">
-  <div class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-1 text-center">
-    <h2>Vanemmerik <span class="hero-subtitle">Producties</span></h2>
-    <p>Woooow</p>
+
+  <div class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-1 gutter text-center">
+    <h2>Vanemmeri<span class="last-letter">k</span> <span class="hero-subtitle">Productie<span class="last-letter">s</span></span></h2>
+    <p class="push-2">Professionele filmmaker en cameraman. Neem contact met me op om samen te kijken of ik iets voor je kan betekenen.</p>
   </div>
 
 </section>
@@ -12,11 +13,11 @@ layout: default
 
 <section class="portfolio grid">
 
-  <div class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-1">
+  <div class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-1 gutter">
     <h2 class="section-title">Recent werk</h2>
   </div>
 
-  <ul class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-1">
+  <ul class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-1 grid portfolio-grid">
     {% for post in site.categories.video limit:10 %}
     <li>
       <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
@@ -28,10 +29,15 @@ layout: default
 </section>
 
 <section class="partners grid">
-  <h2 class="section-title">Partners</h2>
+
+  <div class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-1 gutter">
+    <h2 class="section-title">Partners</h2>
+  </div>
+
   <ul>
   {% for post in site.categories.logo %}
     <li><a href="{{post.site-link}}">{{post.image}}</a></li>
   {% endfor %}
   </ul>
+
 </section>
