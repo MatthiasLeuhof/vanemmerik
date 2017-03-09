@@ -9,8 +9,10 @@
 </head>
 <body>
 
-  <header>
-    <h1>Vanemmerik</h1>
+  <header class="masthead grid">
+    <div class="unit unit-xs-1 unit-s-1 unit-m-1-3 unit-l-1-3">
+      {% if page.url == '/' %}<h1 class="peta logo">Vanemmerik</h1>{% else %}<p class="peta logo"><strong>Vanemmerik</strong></p>{% endif %}
+    </div>
     {% include nav.html nav-class='primary-nav' %}
   </header>
 
