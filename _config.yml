@@ -1,3 +1,6 @@
 markdown: redcarpet
 baseurl: /vanemmerik
 exclude: ['README.md']
+
+gems:
+- jekyll-autoprefixer
