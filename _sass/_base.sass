@@ -34,32 +34,106 @@ body
   display: block
   width: 100%
 
+.relative
+  position: relative
+
 // Header
 
 .masthead
   text-align: center
 
+.logo
+  margin-top: 1.4rem
+  text-transform: uppercase
+  font-size: 0
+  font-weight: 400
+  letter-spacing: .2em
+  height: 50px
+  background:
+    image: url(../assets/images/logo-ve.svg)
+    repeat: no-repeat
+    position: center
+    size: contain
+
 a
-  color: #e051a3
+  color: $link-color
   text-decoration: none
+  letter-spacing: .2em
+  text-transform: uppercase
+  font-weight: 900
 
 .nav
   padding: 0
   margin: 0
+  ul
+    padding: 0
   li
     list-style-type: none
+    margin-bottom: 1.3rem
+    font-size: $peta-font-size
+    line-height: $peta-line-height
+
 
 .current
-  background-color: #7a30d7
-  color: white
+  position: relative
+  &:hover
+    &::before
+      transform: translate(-50%, 5px) scale(1.5, 1)
+  &::before
+    transition: all 300ms ease
+    content: ""
+    background-color: $link-color
+    position: absolute
+    display: block
+    bottom: 0
+    left: 50%
+    width: 20px
+    height: 3px
+    transform: translate(-50%, 5px)
 
-.portfolio-unit
+.section-title
   display: inline-block
+  padding: 0 0 10px
+  letter-spacing: .2em
+  text-transform: uppercase
+  position: relative
+  &::before
+    content: ""
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 3px
+    width: 40px
+    background-color: $base-font-color
 
 @media only screen and (min-width: 25em)
 
 
 @media only screen and (min-width: 38em)
+
+  .nav
+    position: relative
+    text-align: center
+    ul
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 100%
+    li
+      display: inline-block
+      margin-bottom: 0
+      font-size: $mega-font-size
+      line-height: $mega-line-height
+      &:first-child a
+        margin-left: 0
+      &:last-child a
+        margin-right: 0
+    a
+      margin: 0 .65em
+
+
 
 
 @media only screen and (min-width: 60em)
