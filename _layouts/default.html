@@ -9,9 +9,11 @@
 </head>
 <body>
 
-  <header class="masthead grid">
+  <header class="masthead grid push-1">
     <div class="unit unit-xs-1 unit-s-1 unit-m-1-3 unit-l-1-3">
-      {% if page.url == '/' %}<h1 class="peta logo">Vanemmerik</h1>{% else %}<p class="peta logo"><strong>Vanemmerik</strong></p>{% endif %}
+      <a href="{{site.baseurl}}/index.html">
+        {% if page.url == '/' %}<h1 class="giga logo island">Vanemmerik</h1>{% else %}<p class="giga logo island"><strong>Vanemmerik</strong></p>{% endif %}
+      </a>
     </div>
     {% include nav.html nav-class='primary-nav' %}
   </header>
