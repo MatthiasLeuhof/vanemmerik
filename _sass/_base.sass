@@ -26,6 +26,12 @@ html
 *, *::before, *::after
   box-sizing: inherit
 
+*::selection
+  background: $link-color
+
+a::selection, a .last-letter::selection
+  color: #fff
+
 body
   margin: 0
   padding: 0
@@ -41,6 +47,7 @@ body
 
 .masthead
   text-align: center
+  margin-top: 1.3em
 
 .logo-container
   margin-bottom: 1.3rem
@@ -125,6 +132,7 @@ a
     text-transform: uppercase
     letter-spacing: .2rem
     margin-top: 1.3em
+    background-color: $link-color
 
 .hero-subtitle
   font-weight: 100
@@ -132,6 +140,7 @@ a
   letter-spacing: .8rem
   font-size: $mega-font-size
   line-height: $mega-line-height
+  background-color: $base-font-color
 
 .partners ul
   list-style-type: none
@@ -153,7 +162,7 @@ a
     position: absolute
     bottom: 0
     left: 0
-    height: 3px
+    height: 5px
     width: 40px
     background-color: $link-color
 
@@ -167,14 +176,18 @@ a
 
 @media only screen and (min-width: 38em)
 
+  .masthead
+    margin-top: 1.4em
+
   .logo-container
     margin-bottom: 0
 
   .nav
     position: relative
-    text-align: center
+    text-align: right
     ul
       position: absolute
+      padding-right: 1.4em
       top: 50%
       left: 50%
       transform: translate(-50%, -50%)
@@ -183,7 +196,6 @@ a
       display: inline-block
       margin-bottom: 0
       font-size: $mega-font-size
-      // line-height: $mega-line-height
       &:first-child a
         margin-left: 0
       &:last-child a
@@ -195,3 +207,10 @@ a
 
 
 @media only screen and (min-width: 60em)
+
+  .masthead
+    margin-top: 1.5em
+
+  .nav
+    ul
+      padding-right: 1.5em
