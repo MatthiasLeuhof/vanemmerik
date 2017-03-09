@@ -1,5 +1,5 @@
 markdown: redcarpet
-baseurl: /vanemmerik
+baseurl: 
 exclude: ['README.md']
 
 gems:
