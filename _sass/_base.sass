@@ -42,6 +42,9 @@ body
 .masthead
   text-align: center
 
+.logo-container
+  margin-bottom: 1.3rem
+
 .logo
   margin-top: 1.4rem
   text-transform: uppercase
@@ -107,10 +110,37 @@ a
     width: 40px
     background-color: $base-font-color
 
+// Hero section
+
+.hero
+  color: #fff
+  background:
+    image: url(../assets/images/city-background-1.jpg)
+    repeat: no-repeat
+    position: center
+    size: cover
+  h2
+    text-transform: uppercase
+    letter-spacing: .2rem
+    margin-top: 1.3em
+
+.hero-subtitle
+  font-weight: 100
+  display: block
+  letter-spacing: .8rem
+  font-size: $mega-font-size
+  line-height: $mega-line-height
+
+.partners ul
+  list-style-type: none
+
 @media only screen and (min-width: 25em)
 
 
 @media only screen and (min-width: 38em)
+
+  .logo-container
+    margin-bottom: 0
 
   .nav
     position: relative
