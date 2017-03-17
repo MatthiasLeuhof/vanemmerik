@@ -11,22 +11,47 @@ layout: default
 </section>
 
 
-<section class="portfolio grid">
+<section class="grid">
 
   <div class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-1 gutter">
     <h2 class="section-title">Recent werk</h2>
   </div>
 
-  <ul class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-1 grid portfolio-grid">
+
+</section>
+
+<ul id="og-grid" class="og-grid">
+  {% for post in site.categories.video limit:10 %}
+  <li>
+    <a href="#" data-title="{{post.title}}" data-largesrc="{{post.video}}">
+      <img src="assets/images/video-thumbnails/{{post.thumbnail}}" alt="{{post.title}} video">
+    </a>
+
+    <div class="og-expander">
+      <div class="og-expander-inner">
+        <span class="og-close"></span>
+        <div class="og-fullvideo">
+          <div class="og-loading"></div>
+          <iframe src="{{post.video}}" class="video" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div class="og-details">
+          <h3>{{post.title}}</h3>
+        </div>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+
+  <!-- <ul class="unit unit-xs-1 unit-s-1 unit-m-1 unit-l-1 grid portfolio-grid">
     {% for post in site.categories.video limit:10 %}
     <li>
       <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
       <div><iframe src="{{post.video}}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
     </li>
     {% endfor %}
-  </ul>
+  </ul> -->
 
-</section>
 
 <section class="partners grid">
 
